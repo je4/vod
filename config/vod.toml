@@ -1,0 +1,8 @@
+localaddr = ":8721"
+externaladdr = "https://localhost:8721"
+loglevel = "DEBUG"
+jwtkey = "geheim"
+jwtalg = ["HS256","HS384","HS512"]
+
+[webtls]
+type = "dev"

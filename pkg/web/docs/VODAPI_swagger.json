@@ -1,0 +1,47 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Video on Delay API for playback of video streams with delay",
+        "title": "Video on Delay API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Jürgen Enge",
+            "email": "juergen@info-age.net"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "paths": {
+        "/ping": {
+            "get": {
+                "description": "for testing if server is running",
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "mediaserver"
+                ],
+                "summary": "does pong",
+                "operationId": "get-ping",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "BearerAuth": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}

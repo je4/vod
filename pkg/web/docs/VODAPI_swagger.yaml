@@ -1,0 +1,32 @@
+info:
+  contact:
+    email: juergen@info-age.net
+    name: Jürgen Enge
+  description: Video on Delay API for playback of video streams with delay
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Video on Delay API
+  version: "1.0"
+paths:
+  /ping:
+    get:
+      description: for testing if server is running
+      operationId: get-ping
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: does pong
+      tags:
+      - mediaserver
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
